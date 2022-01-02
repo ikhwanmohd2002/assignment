@@ -1,8 +1,7 @@
+public class register {
+    public static void main(String[] args){
 
         Scanner scan = new Scanner(System.in);
-
-
-public static void main(String[] args){
 
         while(true) {
             int a = scan.nextInt();
@@ -36,14 +35,14 @@ public static void main(String[] args){
                         System.out.print("Enter password: ");
                         String p = scan.next();
                         while (file.hasNextLine()) {
-                            System.out.println(file.nextLine());
 
-                            if (n.equals(file.nextLine()) ) {
+                            if (n.equals(file.nextLine()) && (!p.equals(file.nextLine())) && (p.equals(file.nextLine())) ) {
 
                                 System.out.println("You are logged in");
                                 return;
                             }
                         }
+                        System.out.println("Wrong credentials!!");
 
                         file.close();
                     } catch (Exception e) {
@@ -52,4 +51,4 @@ public static void main(String[] args){
                 }
             }
         }
-      } 
+    }
