@@ -1,0 +1,37 @@
+public void search(){
+
+        Scanner scan = new Scanner(System.in);
+        String name="",price="",desc="",stocks="",sales="",review="";
+        System.out.print("What product to search? ");
+        String search = scan.nextLine();
+        System.out.print("\n");
+
+        try{
+            Scanner in = new Scanner(new FileInputStream("allproducts.txt"));
+
+            while(in.hasNextLine()){
+                String lol = in.nextLine();
+                if(lol.equals(search)){
+                    name = lol;
+                    price = in.nextLine();
+                    desc = in.nextLine();
+                    stocks = in.nextLine();
+                    sales = in.nextLine();
+                    review = in.nextLine();
+                    break;
+                }
+            }
+            System.out.println("Product name: "+name);
+            System.out.println("Price : "+price);
+            System.out.println("Description : "+desc);
+            System.out.println("Stocks : "+stocks);
+            System.out.println("Sales : "+sales);
+            System.out.println("Review : "+review);
+
+            in.close();
+        }catch (Exception e){
+            System.out.println("Error");
+        }
+
+
+    }
