@@ -32,7 +32,7 @@ public class customer {
             while(input.hasNextLine()){
                 lol = input.nextLine();
                 if(lol.equals(s)){
-                    prevbal = input.nextLine();
+                    prevbal = input.nextLine(); 
                     in.println(lol);
                     x = Double.parseDouble(prevbal);
                     y=Double.parseDouble(newbal);
